@@ -1,7 +1,7 @@
  
     //Url for Etsy Feedback
     var url = 'https://openapi.etsy.com/v2/users/126850878/feedback/from-buyers.js?includes=image_feed_url'
-    const key = config.key
+    const API_KEY = config.key
    
 
         var set,
@@ -15,7 +15,7 @@
         $.ajax({
             url: url,
             data: {
-                api_key: key, 
+                api_key: API_KEY,
                 limit: limit,
                 offset: page
             },
