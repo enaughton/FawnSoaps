@@ -1,20 +1,7 @@
-
-//var url = https://openapi.etsy.com/v2/shops/fawnsoaps/listings/active.js?includes=MainImage',
-    
-
-//key = '754ofp3jjnqjjschipimydaq';
-// 'https://openapi.etsy.com/v2/users/126850878/feedback/from-buyers?api_key=754ofp3jjnqjjschipimydaq'
-
-
-    // etsy variables
-
-
-
-    
-
-     
-
+ 
+    //Url for Etsy Feedback
     var url = 'https://openapi.etsy.com/v2/users/126850878/feedback/from-buyers.js?includes=image_feed_url'
+    const key = config.key
    
 
         var set,
@@ -28,7 +15,7 @@
         $.ajax({
             url: url,
             data: {
-                api_key: config.key, 
+                api_key: key, 
                 limit: limit,
                 offset: page
             },
@@ -68,15 +55,12 @@
                                review[i].style.display = 'none'
                             
                             }
-
-                        }
-                                             
-                        
+                        }                
                     } else {
                         console.log('no results');
-                    }
                 }
-            });
+            }
+        });
 
 
         
